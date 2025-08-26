@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../plan/plan.css">
+    <title>Gestion de Plannings</title>
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2>Plannings</h2>
+            <h4>Gestion de Plannings</h4>
+        </div>
+
+        <div class="inputs">
+            <input type="date" id="date" placeholder="Début de planning">
+            <input type="month" id="mois" placeholder="Mois">
+            <select id="site">
+                <option value="">Sélectionner un site</option>
+                <option value="Caco">Caco</option>
+                <option value="Kouba">Kouba</option>
+                <option value="Zighout">Zighout</option>
+                <option value="Parc PN">Parc PN</option>
+                <option value="DMRA">DMRA</option>
+            </select>
+            <input type="file" id="planning" accept=".xlsx,.xls,.csv,.pdf">
+            <br>
+            <button id="submit">Ajouter un Planning</button>
+        </div>
+        
+        <div class="outputs">
+            <div class="searchblock">
+                <input class="inputsearch" onkeyup="searchData(this.value)" type="text" id="search" placeholder="Rechercher">
+                <div class="btnsearch">
+                    <button onclick="getSearchMood(this.id)" id="searchmatricule">Rechercher Par Mois</button>
+                    <button onclick="getSearchMood(this.id)" id="searchnom">Rechercher Par Site</button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>Mois</th>
+                        <th>Site</th>
+                        <th>Planning</th>
+                        <th>Modifier</th>
+                        <th>Supprimer</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+<script src="plan.js"></script>
+</body>
+</html>

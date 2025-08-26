@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJET SIE</title>
+    <link rel="stylesheet" href="dashboard2.css">
+    <link rel="icon" type="image/png" href="icons/favicon192.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4CAF50">
+
+
+</head>
+<body>  
+    <div class="countainer">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="">
+                        <div class="logo">
+                        <span class="icon"><ion-icon name="planet" class="logo-icon animated-icon"></ion-icon></span>
+                        <span class="logo-text">GSIE</span>
+                        </div>
+
+                    </a>
+                </li>
+                <div>
+                <li>
+                    
+                    <a href="personnel/personnel.html">
+
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                        <span class="title">Personnel</span>
+                    </a>
+
+                </li>
+                </div class="id">
+                <li>
+                        <a href="cor/cor.html">
+                        <span class="icon"><ion-icon name="finger-print-outline"></ion-icon></span>
+                        <span class="title">Cordonnées</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="indispo/indispo.html">
+                        <span class="icon"><ion-icon name="document-lock-outline"></ion-icon></span>
+                        <span class="title">Indisponibilité</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="plan/plan.html">
+                        <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                        <span class="title">Plannings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="san/san.html">
+                        <span class="icon"><ion-icon name="warning-outline"></ion-icon></span>
+                        <span class="title">Sanctions</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="title">Déconnecter</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <div class="search">
+                    <label>
+                        <ion-icon name="search-outline"></ion-icon>
+                        <input type="text" placeholder="Rechercher">
+                    </label>
+                </div>
+                <div class="user">
+                    <img src="https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </div>
+            </div>
+            <div class="cardbox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">110</div>
+                        <div class="cardname">Employees</div>
+                    </div>
+                <div class="iconbox"><ion-icon name="person-outline"></ion-icon></div>
+                </div>
+
+                 <div class="card">
+                    <div>
+                        <div class="numbers">12</div>
+                        <div class="cardname">Sites</div>
+                    </div>
+                <div class="iconbox"><ion-icon name="business-outline"></ion-icon></div>
+                </div>
+
+                 <div class="card">
+                    <div>
+                        <div class="numbers">10</div>
+                        <div class="cardname">Radios</div>
+                    </div>
+                <div class="iconbox"><ion-icon name="radio-outline"></ion-icon></div>
+                </div>
+
+                 <div class="card">
+                    <div>
+                        <div class="numbers">15</div>
+                        <div class="cardname">Registres d'evenements</div>
+                    </div>
+                <div class="iconbox"><ion-icon name="documents-outline"></ion-icon></div>
+                </div>
+            </div>
+    
+
+            <div class="chartbox">
+                <div class="chart"><canvas id="chart1"></canvas></div>
+                <div class="chart"><canvas id="chart2"></canvas></div>
+            </div>
+        </div>
+    </div>
+
+
+    
+        
+    <script src="dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="chartsJS.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>  
+</body>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js')
+    .then(() => console.log('✅ Service Worker enregistré'))
+    .catch((err) => console.log('Erreur SW:', err));
+}
+</script>
+
+</html>.  
+

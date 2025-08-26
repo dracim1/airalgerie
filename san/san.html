@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../san/san.css">
+    <title>Gestion des Sanctions</title>
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2>Sanctions</h2>
+            <h4>Gestion des Sanctions</h4>
+        </div>
+        <div class="inputs">
+            <input type="text" id="matricule" placeholder="Matricule de l’employé">
+            <input type="text" id="nom" placeholder="Nom de famille">
+            <input type="text" id="prenom" placeholder="Prénom">
+            
+            <!-- Liste déroulante pour Type -->
+            <select id="type_indispo">
+                <option value="">Sélectionnez un type</option>
+                <option value="Maladie">Mise à pied</option>
+                <option value="Congé">Mise à mort</option>
+                <option value="Suspension">Autres</option>
+            </select>
+            
+            <input type="date" id="date_debut" placeholder="Date de début">
+            <input type="date" id="date_fin" placeholder="Date de fin">
+            
+            <!-- Nombre de jours en lecture seule -->
+            <input type="number" id="jours" placeholder="Nombre des jours" readonly>
+            
+            <input type="text" id="motif" placeholder="Motif d'Indisponibilité">
+            <br>
+            <button id="submit">Ajouter un Employé</button>
+        </div>
+        
+        <div class="outputs">
+            <div class="searchblock">
+                <input class="inputsearch" onkeyup="searchData(this.value)" type="text" id="search" placeholder="Rechercher">
+                <div class="btnsearch">
+                    <button onclick="getSearchMood(this.id)" id="searchmatricule">Rechercher Par Matricule</button>
+                    <button onclick="getSearchMood(this.id)" id="searchnom">Rechercher Par Nom</button>
+                </div>
+            </div>
+            <br><br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Matricule</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Type</th>
+                        <th>Date de début</th>
+                        <th>Date de fin</th>
+                        <th>Jours</th>
+                        <th>Motif</th>
+                        <th>Modifier</th>
+                        <th>Supprimer</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+<script src="san.js"></script>
+</body>
+</html>

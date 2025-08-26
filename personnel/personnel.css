@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: red;
+    --red-dark: #d32f2f;
+    --red-light: #ffcdd2;
+    --white: #ffffff;
+    --gray: #f9f9f9;
+    --black1: #212121;
+    --black2: #757575;
+    --hover-bg: #fbe9e7;
+    --border-radius: 10px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 15px;
+    color: var(--black1);
+    background-color: var(--gray);
+    padding: 20px;
+}
+
+.crud {
+    max-width: 1100px;
+    margin: auto;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.head {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.head h2 {
+    color: var(--red);
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.head h4 {
+    color: var(--black2);
+    font-weight: 500;
+}
+
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.inputs input,
+.inputs select {
+    flex: 1 1 30%;
+    padding: 10px;
+    border: 2px solid var(--red);
+    border-radius: var(--border-radius);
+    background-color: var(--red-light);
+    transition: all 0.3s ease;
+    font-size: 16px;
+    color: var(--text-color); /* optionnel si tu as une variable pour le texte */
+    outline: none;
+    appearance: none; /* supprime le style par défaut */
+}
+
+.inputs input:focus,
+.inputs select:focus {
+    background-color: var(--white);
+    border-color: var(--red-dark);
+}
+
+/* Pour donner un petit icône de flèche personnalisée sur les selects */
+.inputs select {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='red'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    padding-right: 30px; /* espace pour la flèche */
+    cursor: pointer;
+}
+
+
+
+#submit {
+    flex: 1 1 100%;
+    background-color: var(--red);
+    color: var(--white);
+    padding: 12px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#submit:hover {
+    background-color: var(--red-dark);
+    box-shadow: 0 0 10px rgba(229, 57, 53, 0.4);
+}
+
+.searchblock {
+    margin-bottom: 20px;
+}
+
+.inputsearch {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--red);
+    border-radius: var(--border-radius);
+    background-color: var(--red-light);
+    margin-bottom: 10px;
+}
+
+.btnsearch {
+    display: flex;
+    gap: 10px;
+}
+
+.btnsearch button {
+    flex: 1;
+    padding: 10px;
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.btnsearch button:hover {
+    background-color: var(--red-dark);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: var(--white);
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    word-break: break-word;
+}
+
+th {
+    background-color: var(--red);
+    color: var(--white);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+tr:hover {
+    background-color: var(--hover-bg);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+td button {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+td button:hover {
+    background-color: var(--red-dark);
+}
+
